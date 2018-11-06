@@ -1,0 +1,72 @@
+<owl-carousel
+        [options]="{items: 1, dots: false, navigation: false}"
+        [items]="images"
+        >
+        <div class="item" *ngFor="let image of images;let i = index">
+            <div class="thumbnail-image" >
+                <img class="my_imag" src="http://lorempixel.com/400/200/{{img}}"/>
+            </div>
+        </div>
+</owl-carousel>
+
+<!--
+
+<h1>Categoria</h1>
+
+
+
+<owl-carousel
+        [options]="{items: 3, dots: false, navigation: false}"
+        [items]="images"
+        >
+        <div class="item" *ngFor="let image of images;let i = index">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Shiba Inu</mat-card-title>
+                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="http://lorempixel.com/400/200/{{img}}" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+</owl-carousel>
+
+-->
+
+<!-- You can use owl-carousel selector to include its component -->
+<!--
+<owl-carousel
+[options]="{items: 1, dots: false, navigation: false}"
+>
+<div class="item" >
+    <div class="thumbnail-image">imagen 1</div>
+    <div class="thumbnail-image">imagen 2</div>
+    <div class="thumbnail-image">imagen 3W</div>
+</div>
+
+<div class="item" >
+    <div class="thumbnail-image">imagen b1</div>
+    <div class="thumbnail-image">imagen b2</div>
+    <div class="thumbnail-image">imagen b3W</div>
+</div>
+
+<div class="item" >
+    <div class="thumbnail-image">imagen b1</div>
+    <div class="thumbnail-image">imagen b2</div>
+    <div class="thumbnail-image">imagen b3W</div>
+</div>
+</owl-carousel>
+-->
+
+

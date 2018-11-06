@@ -1,0 +1,27 @@
+
+<div *ngFor="let categoria of categorias;let i = index" >
+
+    <h1> {{categoria.nombre}} </h1>
+
+
+    <owl-carousel
+        [options]="{items: 3, dots: false, navigation: false}"
+        [items]="images"
+        >
+        <div class="item" *ngFor="let articulo of categoria.articulos" >
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{articulo.nombre}}</mat-card-title>
+
+                </mat-card-header>
+                <img mat-card-image src="https://static.makeuseof.com/wp-content/uploads/2014/06/Best-Places-To-Read-Online-670x335.jpg" alt="Photo of a Shiba Inu">
+
+                <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+</owl-carousel>
+</div>
