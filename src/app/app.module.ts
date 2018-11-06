@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 /* Routers */
 import { routing } from './app.routing';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -44,6 +46,7 @@ import { CategoriasComponent } from './components/categorias/categorias.componen
 import { HomeComponent } from './components/home/home.component';
 import { ArticulosComponent } from './components/articulos/articulos.component';
 import { PageNoFoundComponent } from './components/page-no-found/page-no-found.component';
+import { FormArticulosComponent } from './components/articulos/form-articulos/form-articulos.component';
 
 
 @NgModule({
@@ -54,7 +57,8 @@ import { PageNoFoundComponent } from './components/page-no-found/page-no-found.c
     CategoriasComponent,
     HomeComponent,
     ArticulosComponent,
-    PageNoFoundComponent
+    PageNoFoundComponent,
+    FormArticulosComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +67,8 @@ import { PageNoFoundComponent } from './components/page-no-found/page-no-found.c
     HttpModule,
     HttpClientModule,
     routing,
+    FormsModule,
+    ReactiveFormsModule,
     OwlModule,
     MatToolbarModule,
     MatTabsModule,

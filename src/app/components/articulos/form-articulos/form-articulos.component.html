@@ -1,0 +1,33 @@
+<p>
+  form-articulos works!
+</p>
+
+<form  [formGroup]="nestedForm">
+  <mat-form-field class="example-full-width">
+    <input formControlName="nombre"
+     matInput placeholder="Nombre de articulo" value="">
+  </mat-form-field>
+
+  <button mat-button color="warn" (click)="submitHandler()">Enviar</button>
+
+  <br/>
+
+  <button mat-fab color="primary" (click)="addImagen()">
+    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+  </button>
+
+  <br/>
+
+  <div formArrayName="imagenes">
+    <div *ngFor="let group of imagenArray.controls; let i = index;" [formGroupName]="i">
+      <mat-form-field class="example-full-width">
+        <input
+        formControlName="nombre"
+        matInput placeholder="Nombre de imagen" value="">
+      </mat-form-field>
+
+      <button mat-button color="warn" (click)="removeImagen(i)">Eliminar</button>
+    </div>
+  </div>
+
+</form>

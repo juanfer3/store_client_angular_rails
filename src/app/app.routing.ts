@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PageNoFoundComponent } from './components/page-no-found/page-no-found.component';
 import { CategoriasComponent } from './components/categorias/categorias.component';
 import { ArticulosComponent } from './components/articulos/articulos.component';
+import { FormArticulosComponent } from './components/articulos/form-articulos/form-articulos.component';
 
 
 
@@ -18,6 +19,9 @@ const App_Routes: Routes = [
   },
   {
     path: 'articulos', component: ArticulosComponent
+  },
+  {
+    path: 'articulos/create', component: FormArticulosComponent
   },
   { path: '**', component: PageNoFoundComponent }
 ];
