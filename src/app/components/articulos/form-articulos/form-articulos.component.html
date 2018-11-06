@@ -3,6 +3,20 @@
 </p>
 
 <form  [formGroup]="nestedForm">
+
+    <h4>Basic mat-select</h4>
+    <mat-form-field>
+      <mat-select
+      formControlName="categoria_id"
+      placeholder="Seleccione categoria">
+        <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">
+          {{categoria.nombre}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <br/>
+
   <mat-form-field class="example-full-width">
     <input formControlName="nombre"
      matInput placeholder="Nombre de articulo" value="">
