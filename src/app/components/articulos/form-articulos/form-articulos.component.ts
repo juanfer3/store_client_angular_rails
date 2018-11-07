@@ -3,7 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@angular/forms';
 
 import { Categoria } from '../../../Models/categoria';
+import { Articulo } from '../Models/articulo';
+
 import { CategoriasService } from "../../../services/categorias.service";
+import { ArticulosService } from "../../../services/articulos.service";
 
 
 @Component({
@@ -18,7 +21,8 @@ export class FormArticulosComponent implements OnInit {
   nestedForm: FormGroup;
   constructor(
     private fb: FormBuilder,
-    private categoriasService: CategoriasService
+    private categoriasService: CategoriasService,
+    private articulosService: ArticulosService
     ) { }
 
 
@@ -64,7 +68,18 @@ export class FormArticulosComponent implements OnInit {
   submitHandler() {
 
 
-      console.log({...this.nestedForm.value});
+
+
+      const newArticulo: Articulo = {
+        categoria_id: this.nestedForm.value['categoria_id'],
+        nombre: this.nestedForm.value['nombre']
+      };
+
+      this.articulosService.newArticulo(newArticulo).subscribe(
+        data => {
+          console.log(data);
+        }
+      );
 
 
   }
