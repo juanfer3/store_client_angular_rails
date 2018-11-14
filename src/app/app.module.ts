@@ -47,6 +47,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ArticulosComponent } from './components/articulos/articulos.component';
 import { PageNoFoundComponent } from './components/page-no-found/page-no-found.component';
 import { FormArticulosComponent } from './components/articulos/form-articulos/form-articulos.component';
+import { DetalleArticuloComponent } from './components/articulos/detalle-articulo/detalle-articulo.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { FormArticulosComponent } from './components/articulos/form-articulos/fo
     HomeComponent,
     ArticulosComponent,
     PageNoFoundComponent,
-    FormArticulosComponent
+    FormArticulosComponent,
+    DetalleArticuloComponent
   ],
   imports: [
     BrowserModule,

@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@angular/forms';
 
+/* Routers */
+import {Router} from '@angular/router';
+
 import { Categoria } from '../../../Models/categoria';
-import { Articulo } from '../Models/articulo';
+import { Articulo } from '../../Models/articulo';
 
 import { CategoriasService } from "../../../services/categorias.service";
 import { ArticulosService } from "../../../services/articulos.service";
@@ -22,7 +25,8 @@ export class FormArticulosComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private categoriasService: CategoriasService,
-    private articulosService: ArticulosService
+    private articulosService: ArticulosService,
+    private router: Router
     ) { }
 
 
@@ -37,7 +41,7 @@ export class FormArticulosComponent implements OnInit {
     this.categoriasService.getCategorias().subscribe(
       data => {
         this.categorias = data;
-        console.log(this.categorias);
+        //console.log(this.categorias);
       }
     );
 
@@ -77,7 +81,11 @@ export class FormArticulosComponent implements OnInit {
 
       this.articulosService.newArticulo(newArticulo).subscribe(
         data => {
-          console.log(data);
+    
+              //console.log(data);
+              
+              this.router.navigate(['/categorias']); 
+          
         }
       );
 

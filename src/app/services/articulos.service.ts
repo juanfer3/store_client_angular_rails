@@ -15,6 +15,7 @@ export class ArticulosService {
   constructor(private http: HttpClient) { }
 
   newArticulo(articulo: Articulo) {
+    
     const json = JSON.stringify(articulo);
     const post_params = 'json=' + json;
     const headers = new HttpHeaders().set('Content-Type', 'application]/json');
